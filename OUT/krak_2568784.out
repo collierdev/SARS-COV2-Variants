@@ -1,0 +1,92 @@
+/var/spool/slurm/d/job2568784/slurm_script: line 14: activate: No such file or directory
+Loading database information... done.
+19287526 sequences (3868.07 Mbp) processed in 321.024s (3604.9 Kseq/m, 722.95 Mbp/m).
+  16811333 sequences classified (87.16%)
+  2476193 sequences unclassified (12.84%)
+Loading database information... done.
+8659373 sequences (1731.25 Mbp) processed in 145.029s (3582.5 Kseq/m, 716.24 Mbp/m).
+  4123297 sequences classified (47.62%)
+  4536076 sequences unclassified (52.38%)
+Loading database information... done.
+6992262 sequences (1359.62 Mbp) processed in 122.836s (3415.4 Kseq/m, 664.11 Mbp/m).
+  3439223 sequences classified (49.19%)
+  3553039 sequences unclassified (50.81%)
+Loading database information... done.
+13088547 sequences (2572.52 Mbp) processed in 215.194s (3649.3 Kseq/m, 717.27 Mbp/m).
+  9936887 sequences classified (75.92%)
+  3151660 sequences unclassified (24.08%)
+Loading database information... done.
+5329718 sequences (1030.99 Mbp) processed in 104.456s (3061.4 Kseq/m, 592.20 Mbp/m).
+  2967714 sequences classified (55.68%)
+  2362004 sequences unclassified (44.32%)
+Loading database information... done.
+2880268 sequences (558.18 Mbp) processed in 56.795s (3042.8 Kseq/m, 589.68 Mbp/m).
+  2590065 sequences classified (89.92%)
+  290203 sequences unclassified (10.08%)
+Loading database information... done.
+7925786 sequences (1543.87 Mbp) processed in 133.697s (3556.9 Kseq/m, 692.85 Mbp/m).
+  6572042 sequences classified (82.92%)
+  1353744 sequences unclassified (17.08%)
+Loading database information... done.
+9043930 sequences (1754.93 Mbp) processed in 161.534s (3359.3 Kseq/m, 651.85 Mbp/m).
+  6557000 sequences classified (72.50%)
+  2486930 sequences unclassified (27.50%)
+Loading database information... done.
+6420543 sequences (1258.90 Mbp) processed in 108.393s (3554.0 Kseq/m, 696.86 Mbp/m).
+  6145540 sequences classified (95.72%)
+  275003 sequences unclassified (4.28%)
+Loading database information... done.
+15507731 sequences (3001.83 Mbp) processed in 235.932s (3943.8 Kseq/m, 763.40 Mbp/m).
+  7316775 sequences classified (47.18%)
+  8190956 sequences unclassified (52.82%)
+Loading database information... done.
+8995824 sequences (1709.25 Mbp) processed in 136.927s (3941.9 Kseq/m, 748.97 Mbp/m).
+  7905049 sequences classified (87.87%)
+  1090775 sequences unclassified (12.13%)
+Loading database information... done.
+9971162 sequences (1950.18 Mbp) processed in 127.873s (4678.6 Kseq/m, 915.05 Mbp/m).
+  8369738 sequences classified (83.94%)
+  1601424 sequences unclassified (16.06%)
+Loading database information... done.
+8523702 sequences (1654.76 Mbp) processed in 114.230s (4477.1 Kseq/m, 869.17 Mbp/m).
+  7534110 sequences classified (88.39%)
+  989592 sequences unclassified (11.61%)
+Loading database information... done.
+3587278 sequences (697.89 Mbp) processed in 60.276s (3570.9 Kseq/m, 694.70 Mbp/m).
+  3390469 sequences classified (94.51%)
+  196809 sequences unclassified (5.49%)
+Loading database information... done.
+16787041 sequences (3294.82 Mbp) processed in 254.824s (3952.6 Kseq/m, 775.79 Mbp/m).
+  14416898 sequences classified (85.88%)
+  2370143 sequences unclassified (14.12%)
+Loading database information... done.
+13900997 sequences (2721.94 Mbp) processed in 217.555s (3833.8 Kseq/m, 750.69 Mbp/m).
+  8817192 sequences classified (63.43%)
+  5083805 sequences unclassified (36.57%)
+Loading database information... done.
+15341550 sequences (3004.26 Mbp) processed in 230.552s (3992.6 Kseq/m, 781.84 Mbp/m).
+  6219071 sequences classified (40.54%)
+  9122479 sequences unclassified (59.46%)
+Loading database information... done.
+4004354 sequences (768.68 Mbp) processed in 66.426s (3617.0 Kseq/m, 694.32 Mbp/m).
+  3708540 sequences classified (92.61%)
+  295814 sequences unclassified (7.39%)
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda deactivate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+

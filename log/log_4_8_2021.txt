@@ -1,0 +1,1000 @@
+  121  wget <https://www.ncbi.nlm.nih.gov/genome/86693?genome_assembly_id=830910#>
+  122  wget <https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/011/537/005/GCA_011537005.1_ASM1153700v1/GCA_011537005.1_ASM1153700v1_genomic.fna.gz>
+  123  wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/011/537/005/GCA_011537005.1_ASM1153700v1/GCA_011537005.1_ASM1153700v1_genomic.fna.gz
+  124  gunzip GCA_011537005.1_ASM1153700v1_genomic.fna.gz
+  125  ls
+  126  wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/011/537/525/GCA_011537525.1_ASM1153752v1/GCA_011537525.1_ASM1153752v1_genomic.fna.gz
+  127  gunzip GCA_011537525.1_ASM1153752v1_genomic.fna.gz
+  128  wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/011/537/815/GCA_011537815.1_ASM1153781v1/GCA_011537815.1_ASM1153781v1_genomic.fna.gz
+  129  gunzip GCA_011537815.1_ASM1153781v1_genomic.fna.gz
+  130  wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/011/537/425/GCA_011537425.1_ASM1153742v1/GCA_011537425.1_ASM1153742v1_genomic.fna.gz
+  131  gunzip GCA_011537425.1_ASM1153742v1_genomic.fna.gz
+  132  ls
+  133  mkdir kraken2_viralDB
+  134  cd kraken2_viralDB
+  135  wget https://genome-idx.s3.amazonaws.com/kraken/k2_viral_20201202.tar.gz
+  136  gunzip k2_viral_20201202.tar.gz
+  137  ls
+  138  cd 
+  139  ls
+  140  CommandLine
+  141  cd CommandLine
+  142  mkdir Log
+  143  cd Log
+  144  history > lecture1_history.txt
+  145  ls
+  146  less lecture1_history.txt
+  147  who -u
+  148  logout
+  149  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+  150  ls
+  151  bash Miniconda3-latest-Linux-x86_64.sh
+  152  source ~/.bashrc
+  153  conda install -c bioconda fastqc
+  154  fastqc --help
+  155  conda install -c bioconda any2fasta
+  156  conda create -n new-env
+  157  conda env list
+  158  conda activate new-env
+  159  conda deactivate
+  160  conda create -n python-v2.7 python=2.7
+  161  python --version
+  162  conda activate python-v2.7
+  163  python --version
+  164  conda deactivate
+  165  conda env remove -n python-v2.7
+  166  conda env remove -n new-env
+  167  conda env list
+  168  conda create -n fastANI
+  169  conda activate fastANI
+  170  conda install -c bioconda fastani
+  171  fastANI -h
+  172  conda create -n kraken2 -c bioconda kraken2
+  173  conda deactivate
+  174  conda env list
+  175  git clone https://github.com/rvicedomini/strainberry.git
+  176  ls
+  177  cd strainberry
+  178  conda env create -n sberry --file environment.yml
+  179  conda env list
+  180  conda update fastqc
+  181  cd
+  182  ls
+  183  mkdir Tools
+  184  cd Tools
+  185  git clone https://github.com/lh3/minimap2
+  186  cd minimap2 && make
+  187  ls
+  188  ./minimap2 -h
+  189  ls
+  190  cd
+  191  echo $PATH
+  192  vi ~/.bashrc
+  193  source ~/.bashrc
+  194  ls
+  195  cd CommandLine
+  196  ls
+  197  cd ReferenceGenomes
+  198  ls
+  199  cd kraken2_viralDB
+  200  ls
+  201  tar -xvf k2_viral_20201202.tar
+  202  cd..
+  203  ls
+  204  cd..
+  205  ls
+  206  cd
+  207  ;s
+  208  ls
+  209  cd CommandLine
+  210  ls
+  211  cd ReferenceGenomes
+  212  ls
+  213  tar -czvf viralDB.tar.gz kraken2_viralDB/*
+  214  ls
+  215  du -sh kraken2_viralDB
+  216  du -sh
+  217  ls kraken2_viralDB
+  218  ls kraken2_viralDB | wc -l
+  219  cd 
+  220  conda install -c bioconda -c conda-forge multiqc
+  221  conda install -c bioconda trimmomatic
+  222  conda create -nnanoplot -c bioconda nanoplot
+  223  conda env list
+  224  conda remove --nanoplot --all
+  225  cond remove --name nanoplot --all
+  226  conda remove --name nanoplot --all
+  227  conda list env
+  228  conda update conda
+  229  conda list env
+  230  conda deactivate
+  231  conda env list
+  232  conda remove --name nanoplot --all
+  233  fastqc --help
+  234  conda
+  235  source ~/.bashrc
+  236  fastqc --help
+  237  conda env list
+  238  conda list
+  239  conda create -n nanoplot -c bioconda nanoplot
+  240  ls
+  241  cd CommandLine
+  242  ls
+  243  cd Log
+  244  history > lecture2_history.txt
+  245  ls
+  246  cd
+  247  ls
+  248  logout
+  249  conda deactivate
+  250  lougout
+  251  logout
+  252  anyfasta 0h
+  253  any2fasta -h
+  254  ls
+  255  cd CommandLine
+  256  ls
+  257  less GCF_009858895.2_ASM985889v3_genomic.gbff
+  258  any2fasta GCF_009858895.2_ASM985889v3_genomic.gbff > GCF_009858895.2_ASM985889v3_genomic.fna
+  259  less GCF_009858895.2_ASM985889v3_genomic.fna
+  260  cd
+  261  conda env list
+  262  cd CommandLine
+  263  fastANI -q GCA_011537525.1_ASM1153752v1_genomic.fna -r GCF_009858895.2_ASM985889v3_genomic.fna -o US_to_Reference
+  264  conda activate fastANI
+  265  fastANI -q GCA_011537525.1_ASM1153752v1_genomic.fna -r GCF_009858895.2_ASM985889v3_genomic.fna -o US_to_Reference
+  266  ls
+  267  cd ReferenceGenomes
+  268  ls
+  269  cd.
+  270  cd .
+  271  cd ..
+  272  ls
+  273  cd ReferenceGenomes
+  274  fastANI -q GCA_011537525.1_ASM1153752v1_genomic.fna -r GCF_009858895.2_ASM985889v3_genomic.fna -o US_to_Reference
+  275  ls
+  276  cd ..
+  277  ls
+  278  mv GCF_009858895.2_ASM985889v3_genomic.fna ReferenceGenomes
+  279  cd ReferenceGenomes
+  280  fastANI -q GCA_011537525.1_ASM1153752v1_genomic.fna -r GCF_009858895.2_ASM985889v3_genomic.fna -o US_to_Reference
+  281  ls
+  282  ls GCA*.fna > query_genomes.txt
+  283  fastANI -q GCF_009858895.2_ASM985889v3_genomic.fna --rl query_genomes.txt -o all_to_Reference
+  284  ls
+  285  ls -l
+  286  rm -n US_to_Referemce
+  287  rm US_to_Reference
+  288  ls
+  289  ls-l
+  290  ls -l
+  291  head query_genomes.txt
+  292  touch all_to_ref.sh
+  293  vim all_to_ref.sh
+  294  head all_to_ref.sh
+  295  ls =l
+  296  ls -l
+  297  head all_to_ref.sh
+  298  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash all_to_ref.sh
+  299  rm all_to_Reference
+  300  vim all_to_ref.sh
+  301  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash all_to_ref.sh
+  302  less all_to_Reference.txt
+  303  head all_to_Reference.txt
+  304  rm all_to_Reference.txt
+  305  vim all_to_ref.sh
+  306  cd
+  307  ls
+  308  cd CommandLine
+  309  ls
+  310  cd ReferenceGenomes
+  311  ls
+  312  ls-l
+  313  ls -l
+  314  head all_to_ref.sh
+  315  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash all_to_ref.sh
+  316  head all_to_Reference.txt
+  317  less all_to_Reference.txt
+  318  fastANI -q GCF_009858895.2_ASM985889v3_genomic.fna --rl query_genomes.txt -o all_to_Reference.txt
+  319  less all_to_Reference.txt
+  320  fastANI -q GCA_011537525.1_ASM1153752v1_genomic.fna --rl query_genomes.txt -o all_to_Reference
+  321  rm all_to_Reference
+  322  fastANI -q GCA_011537525.1_ASM1153752v1_genomic.fna --rl query_genomes.txt -o all_to_Referen
+  323  fastANI -q GCA_011537525.1_ASM1153752v1_genomic.fna --rl query_genomes.txt -o all_to_Reference.txt
+  324  less all_to_Reference.txt
+  325  fastANI -help
+  326  less GCA_011537525.1_ASM1153752v1_genomic.fna
+  327  fastANI -q GCA_011537525.1_ASM1153752v1_genomic.fna -r GCF_009858895.2_ASM985889v3_genomic.fna -o US_to_ref.txt
+  328  less US_to_ref.txt
+  329  updata fastANI
+  330  update fastANI
+  331  conda update fastANI
+  332  less GCA_011537525.1_ASM1153752v1_genomic.fna
+  333  less GCF_009858895.2_ASM985889v3_genomic.fna
+  334  less US_to_ref.txt
+  335  fastANI
+  336  fastANI -h
+  337  ls =l
+  338  ls -l
+  339  fastANI -q GCA_011537525.1_ASM1153752v1_genomic.fna -r GCF_009858895.2_ASM985889v3_genomic.fna -o output.txt
+  340  less output.txt
+  341  ls
+  342  pwd
+  343  pwd scratch
+  344  cd scratch
+  345  ls
+  346  pwd
+  347  cd
+  348  ls
+  349  pwd gauss_scrdir
+  350  cd CommandLine
+  351  ls
+  352  cd
+  353  pwd junior.fasta
+  354  ls -l
+  355  ls
+  356  cd CommanLine
+  357  cd CommandLine
+  358  ls
+  359  cd TextFiles
+  360  ls
+  361  cat university.txt vermont.txt > uvm.txt
+  362  head uvm.txt
+  363  sed '2@2 uvm.txt
+  364  c
+  365  '
+  366  sed '2@2' uvm.txt
+  367  sed "2@2" uvm.txt
+  368  sed 's/2@2//g' uvm.txt
+  369  awk ' $3 >= 0.05 && $4 <= 2 ' expStat.txt
+  370  awk ' $3 <= 0.05 && $4 <= 2 ' expStat.txt
+  371  cd ..
+  372  ls
+  373  mkdir gbffFiles
+  374  cd gbffFiles
+  375  wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/011/537/005/GCA_011537005.1_ASM1153700v1/GCA_011537005.1_ASM1153700v1_genomic.gbff.gz
+  376  gunzip GCA_011537005.1_ASM1153700v1_genomic.gbff.gz
+  377  wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/011/537/525/GCA_011537525.1_ASM1153752v1/GCA_011537525.1_ASM1153752v1_genomic.gbff.gz
+  378  gunzip GCA_011537525.1_ASM1153752v1_genomic.gbff.gz
+  379  wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/011/537/815/GCA_011537815.1_ASM1153781v1/GCA_011537815.1_ASM1153781v1_genomic.gbff.gz
+  380  gunzip GCA_011537815.1_ASM1153781v1_genomic.gbff.gz
+  381  wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/011/537/425/GCA_011537425.1_ASM1153742v1/GCA_011537425.1_ASM1153742v1_genomic.gbff.gz
+  382  gunzip GCA_011537425.1_ASM1153742v1_genomic.gbff.gz
+  383  ls
+  384  for i in gbffFiles/*.gbff;do SAMPLE=$(echo ${i} | sed "s/.gbff//") any2fasta ${SAMPLE}.gbff > ${SAMPLE}.fna; done
+  385  cd..
+  386  cd ..
+  387  ls
+  388  cd gbffFiles
+  389  ls
+  390  for i in gbffFiles/*.gbff;do SAMPLE=$(echo ${i} | sed "s/.gbff//") any2fasta ${SAMPLE}.gbff > ${SAMPLE}.fna; done
+  391  for i in *.gbff;do SAMPLE=$(echo ${i} | sed "s/.gbff//") any2fasta ${SAMPLE}.gbff > ${SAMPLE}.fna; done
+  392  for i in gbffFiles/*.gbff;do SAMPLE=$(echo ${i} | sed "s/.gbff//") any2fasta ${SAMPLE}.gbff > ${SAMPLE}.fna; done
+  393  la
+  394  ls
+  395  ls GCA*.fna > query_gbff.txt
+  396  ls GCA*.gbff > query_gbff.txt
+  397  ls
+  398  query_gbff.txt
+  399  head query_gbff.txt
+  400  vim query_gbff.txt
+  401  head query_gbff.txt
+  402  for i in /*.gbff;do SAMPLE=$(echo ${i} | sed "s/.gbff//") any2fasta ${SAMPLE}.gbff > ${SAMPLE}.fna; done
+  403  for i in *.gbff;do SAMPLE=$(echo ${i} | sed "s/.gbff//") && any2fasta ${SAMPLE}.gbff > ${SAMPLE}.fna; done
+  404  ls
+  405  cd ..
+  406  ls
+  407  cd Log
+  408  ls
+  409  history > exam.txt
+  410  logout
+  411  conda list tools
+  412  conda tool list
+  413  conda list
+  414  cond env list
+  415  conda env list
+  416  conda create -n samtools -c bioconda samtools
+  417  conda create -n bowtie2 -c bioconda bowtie2
+  418  conda create -n minimap2 -c bioconda minimap2
+  419  python -v
+  420  conda env list
+  421  activate nanoplot
+  422  conda activate nanoplot
+  423  python -V
+  424  conda install -c bioconda nanofilt
+  425  conda install -c bioconda nanocomp
+  426  conda deactivate
+  427  conda tool list
+  428  conda list tool
+  429  conda list tools
+  430  conda tools 
+  431  conda list
+  432  conda create -n porechop -c bioconda porechop
+  433  conad env list
+  434  conda env list
+  435  conda create -n porechop install -c bioconda porechop
+  436  conda create -n porechop -c bioconda porechop
+  437  conda update porechop
+  438  conda activate porechop
+  439  conda update porechop
+  440  conda deactivate
+  441  ls
+  442  cd CommandLine
+  443  open vi
+  444  vi
+  445  ls
+  446  mv download.sh raw_nanopore
+  447  cd raw_nanopore
+  448  ls
+  449  bash download.sh
+  450  ls
+  451  for i in *.gz;do gunzip i; done 
+  452  for i in /*.gz;do gunzip i; done
+  453  for i in raw_nanopore/*.gz;do gunzip i: done; 
+  454  for i in raw_nanopore/*.gz;do gunzip i; done
+  455  for i in raw_nanopore/*.gz;do gunzip $i: done
+  456  raw_nanopore]$ for i in raw_nanopore/*.gz;do gunzip $i; done
+  457  for i in raw_nanopore/*.gz;do gunzip ${i}; done
+  458  for i in *.gz;do gunzip ${i}; done
+  459  ls
+  460  cd
+  461  cd CommandLine/raw_illumina
+  462  ls
+  463  vim
+  464  bash download.sh
+  465  ls
+  466  ls -l
+  467  for i in *.gz;do gunzip ${i}; done
+  468  ls
+  469  vim
+  470  ls
+  471  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash raw_fastqc.sh
+  472  ls
+  473  ls -l
+  474  for i in *.zip;do unzip ${i}; done
+  475  ls
+  476  cd ..
+  477  multiqc raw_illumina/ -o multiqc_raw_illumina
+  478  ls
+  479  cd multiqc_raw_illumina
+  480  ls
+  481  cd ..
+  482  mv multiqc_raw_illumina raw_illumina
+  483  ls
+  484  cd raw_illumina
+  485  ls
+  486  ls multiqc_raw_illumina
+  487  less multiqc_report.html
+  488  head multiqc_report.html
+  489  multiqc_report.html
+  490  open multiqc_report.html
+  491  vim multiqc_report.html
+  492  cd CommandLine
+  493  ls
+  494  cd raw_illumina
+  495  cd ..
+  496  cd raw_nanopore
+  497  conda activate nanoplot
+  498  vim
+  499  wim nanoplot.sh
+  500  vim nanoplot.sh
+  501  -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanoplot.sh
+  502  vim nanoplot.sh
+  503  -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanoplot.sh
+  504  vim nanoplot.sh
+  505  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanoplot.sh
+  506  vim nanoplot.sh
+  507  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanoplot.sh
+  508  vim nanoplot.sh
+  509  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanoplot.sh
+  510  vim nanoplot.shj
+  511  vim nanoplot.sh
+  512  mv nanoplot.sh ..
+  513  ls
+  514  cd ..
+  515  ls
+  516  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanoplot.sh
+  517  ;s
+  518  ls
+  519  cd CommandLine
+  520  ls
+  521  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanoplot.sh
+  522  conda activate nanoplot
+  523  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanoplot.sh
+  524  conda update nanoplot
+  525  ls
+  526  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanoplot.sh
+  527  conda deactivate
+  528  vim
+  529  ls
+  530  vim nanoplot.sh
+  531  conda activate nanoplot
+  532  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanoplot.sh
+  533  ls
+  534  cd CommandLine
+  535  ls
+  536  le>
+  537  vim nanoplot.sh
+  538  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanoplot.sh
+  539  ls
+  540  cd raw_nanopore
+  541  ls raw_nanopore
+  542  ls
+  543  ls ERR5160672_GridION_sequencing_Raw_reads_ONT_CLINICAL_SHEF-D1E59_nanoplot
+  544  cd ERR5160672_GridION_sequencing_Raw_reads_ONT_CLINICAL_SHEF-D1E59_nanoplot
+  545  less NanoStats.txt
+  546  cd CommandLine
+  547  vim
+  548  ls
+  549  #!/bin/bash
+  550  source activate ONT_tools
+  551  cd raw_nanopore
+  552  NanoComp --fastq ERR5160672_GridION_sequencing_Raw_reads_ONT_CLINICAL_SHEF-D1E59.fastq.gz ERR5160675_GridION_sequencing_Raw_reads_ONT_CLINICAL_SHEF-D1E95.fastq.gz ERR5160679_GridION_sequencing_Raw_reads_ONT_CLINICAL_SHEF-D1F56.fastq.gz ERR5160684_GridION_sequencing_Raw_reads_ONT_CLINICAL_SHEF-D20CB.fastq.gz ERR5160688_GridION_sequencing_Raw_reads_ONT_CLINICAL_SHEF-D21AA.fastq.gz ERR5160695_GridION_sequencing_Raw_reads_ONT_CLINICAL_SHEF-D2438.fastq.gz --names D1E59 D1E95 D1F56 D20CB D21AA D2438 --outdir NanoComp_out
+  553  cd ..
+  554  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanocomp.sh
+  555  conda update nanocomp
+  556  conda tools
+  557  conda tool
+  558  conta env 
+  559  conda env tools
+  560  conda tools list
+  561  conda tool list
+  562  conda env tools list
+  563  conda list
+  564  conda install -c bioconda nanoplot
+  565  activate nanoplot
+  566  conda install -c bioconda nanoplot
+  567  conda update nanoplot
+  568  conda activate nanoplot
+  569  conda update nanocomp
+  570  conda update nanoplot
+  571  conda deactivate
+  572  ls
+  573  vim nanocomp.sh
+  574  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash  nanoplot.sh
+  575  ls
+  576  ls raw_nanopore
+  577  cd raw_nanopore
+  578  head download.sh
+  579  bash download.sh
+  580  cd ..
+  581  ls
+  582  vim nanocomp.sh
+  583  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanoplot.sh
+  584  cd CommandLine
+  585  vim nanoplot.sh
+  586  vim nanocomp.sh
+  587  for i in `ls -1 raw_nanopore/*.fastq.gz | sed 's/\.fastq.gz//'`; do echo $i.fastq.gz; echo $i ;done 
+  588  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanocomp.sh
+  589  ls
+  590  vim nanoplot.sh
+  591  vim nanocomp.sh
+  592  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanocomp.sh
+  593  vim nanocomp.sh
+  594  pip install joypy
+  595  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanocomp.sh
+  596  conda install -c conda-forge joypy
+  597  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanocomp.sh
+  598  qls
+  599  ls
+  600  vim nanoplot.sh
+  601  vim nanocomp.sh
+  602  ls raw_nanopore
+  603  vim nanocomp.sh
+  604  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash nanocomp.sh
+  605  ls
+  606  vim
+  607  ls raw_illumina
+  608  vd raw_illumina
+  609  bash download.sh
+  610  cd raw_illumina
+  611  bash download.sh
+  612  ls-l
+  613  ls -l
+  614  cd ..
+  615  ls
+  616  vim trimmomatic .sh
+  617  ls
+  618  vim trimmomatic.sh
+  619  ls
+  620  cd CommandLine
+  621  ls
+  622  cd raw_illumina
+  623  ls
+  624  mkdir rawQC
+  625  mv *.zip *html *_fastqc rawQC
+  626  ls
+  627  mv .fastq rawQC
+  628  mv *.fastq rawQC
+  629  ls
+  630  sort
+  631  cd ..
+  632  ls
+  633  head trimmomatic
+  634  rm trimmomatic
+  635  ls
+  636  vim trimmomatic.sh
+  637  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash trimmomatic.sh
+  638  lsd
+  639  ls
+  640  cd fastq
+  641  ls
+  642  cd ..
+  643  ls
+  644  cd raw_illumina
+  645  ls
+  646  tool list
+  647  tools list
+  648  env tools
+  649  env list
+  650  conda tools list
+  651  conda tool list
+  652  conda list
+  653  activate nanoplot
+  654  conda activate nanoplot
+  655  conda tools list
+  656  conda list
+  657  conda deactivate
+  658  conda env list
+  659  conda activate porechop
+  660  conda deactivate
+  661  cd ..
+  662  vim
+  663  ls
+  664  ls raw_nanopore
+  665  cd raw_nanopore
+  666  ls
+  667  mkdir raw_fastqc
+  668  mv *.fastq raw_fastqc
+  669  cd..
+  670  cd ..
+  671  ls
+  672  #!/bin/bash
+  673  for i in raw_nanopore/*.fastq.gz; do   SAMPLE=$(echo ${i} | sed "s/.fastq\.gz//") ;   echo ${SAMPLE}.fastq.gz;   porechop -i ${SAMPLE}.fastq.gz -o ${SAMPLE}_chop.fastq.gz;      don
+  674  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash porechop.sh
+  675  vim porechop.sh
+  676  #!/bin/bash
+  677  for i in raw_nanopore/*.fastq.gz; do   SAMPLE=$(echo ${i} | sed "s/.fastq\.gz//") ;   echo ${SAMPLE}.fastq.gz;   porechop -i ${SAMPLE}.fastq.gz -o ${SAMPLE}_chop.fastq.gz;     
+  678  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash porechop.sh
+  679  ls
+  680  cd raw_nanopore
+  681  ls
+  682  ls -l
+  683  cd ..
+  684  vim porechop.sh
+  685  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash porechop.sh
+  686  vim porechop.sh
+  687  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash porechop.sh
+  688  cd CommandLine
+  689  ls
+  690  cd raw_nanopore
+  691  ls
+  692  rm *_chop.fastq.gz
+  693  ls
+  694  cd ..
+  695  conda activate porechop
+  696  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash porechop.sh
+  697  cd CommandLine
+  698  conda activate porechop
+  699  bash porechop.sh
+  700  ls
+  701  cd CommandLine
+  702  ls
+  703  cd raw_nanopore
+  704  ls
+  705  cd CommandLine/raw_nanopore
+  706  ls
+  707  ls -l
+  708  rm *_chop.fastq.gz
+  709  ls -l
+  710  cd ..
+  711  ls-l
+  712  ls -l
+  713  less porchop.sh
+  714  less porechop.sh
+  715  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash porechop.sh
+  716  sls
+  717  ls
+  718  cd raw_nanopore
+  719  ls
+  720  rm *_chop.fastq.gz
+  721  ls
+  722  cd
+  723  ls
+  724  cd CommandLine
+  725  ls
+  726  bash porechop
+  727  bash porechop.sh
+  728  vim
+  729  bash nanofilt.sh
+  730  conda activate nanoplot
+  731  bash nanofilt.sh
+  732  ls
+  733  cd raw_illumina
+  734  ls
+  735  mkdir aggregate_data
+  736  mv *paired_1.fastq.gz aggregate_data
+  737  mv *paired_2.fastq.gz aggregate_data
+  738  mv *unpaired_1.fastq.gz aggregate_data
+  739  ls
+  740  ls rawQC
+  741  cd ..
+  742  cd raw_illumina
+  743  ls
+  744  mv aggregate_data ..
+  745  cd ..
+  746  mv aggregate_data raw_nanopore
+  747  cd raw_nanopore
+  748  ls
+  749  mv *_trimmed.fastq.gz aggregate_data
+  750  mv aggregate_data ..
+  751  cd..
+  752  cd ..
+  753  ls
+  754  ls aggregate_data
+  755  vim
+  756  ls
+  757  vim aggregate_fastqc.sh
+  758  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash aggregate_fastqc.sh
+  759  conda deactivate
+  760  srun -p short --nodes=1 --ntasks=2 --mem=16g --pty /bin/bash aggregate_fastqc.sh
+  761  multiqc aggregate_data/ -o multiqc_aggregate_data
+  762  cd log
+  763  cd Log
+  764  ls
+  765  history > exam.txt
+  766  cd ..
+  767  ;pgpit
+  768  logout
+  769  ls
+  770  cd CommandLine/Log
+  771  less exam.txt
+  772  logout
+  773  ls
+  774  cd CommandLine
+  775  ls ~l
+  776  ls -l
+  777  ls -lu
+  778  stat raw_illumina
+  779  wc -c raw_illumina
+  780  du raw_illumina
+  781  ls -lh
+  782  ls -lh raw_illumina
+  783  vim 
+  784  ls
+  785  cd
+  786  ls
+  787  Cd CommandLine
+  788  cd CommandLine
+  789  ls
+  790  cd CommanLine
+  791  CommandLine
+  792  cd CommandLine
+  793  ls
+  794  cd
+  795  mkdir metagenomics
+  796  ls
+  797  cd metagenomics
+  798  vim
+  799  bash download.sh
+  800  ls
+  801  mkdir raw_reads
+  802  mv *.gz raw_reads
+  803  vim
+  804  ls
+  805  bash fastqc.sh
+  806  q
+  807  ls
+  808  ls raw_reads
+  809  bash multiqc.sh
+  810  ls
+  811  bash multiqc.sh
+  812  bash mulitqc.sh
+  813  history > log_4_7_2021.txt
+  814  ls
+  815  head log_4_7_2021.txt
+  816  tail log_4_7_2021.txt
+  817  conda create -n kraken2 -c conda-forge -c bioconda -c defaults kraken2 bracken
+  818  conda list
+  819  conda env 
+  820  conda env list
+  821  conda activate kraken2
+  822  conda install -c
+  823  conda install -c bioconda krona
+  824  ls
+  825  ls -l
+  826  realpath metagenomics
+  827  ls
+  828  cd metageomics
+  829  cd metagenomics
+  830  ls
+  831  ls multiqc_raw_reads
+  832  ls multiqc_raw_reads/multiqc_data
+  833  ls
+  834  ls raw_reads
+  835  vim
+  836  ls
+  837  sbatch kraken.sh
+  838  squeue
+  839  squeue jwcollie
+  840  squeue -u jwcollie
+  841  squeue jwcollie
+  842  squeue -u jwcollie
+  843  ls
+  844  ls raw_reads
+  845  ls
+  846  ls raw_reads
+  847  ls raw_reads| wc -l *.out
+  848  ls
+  849  cd raw_reads
+  850  find *.out -type f -exec file -b {} + | sort | uniq -c | sort -nr
+  851  ls
+  852  env 
+  853  env list
+  854  conda list
+  855  ls
+  856  cd ..
+  857  mkdir cleaned_reads
+  858  mv raw_reads/*.txt cleaned_reads
+  859  mv raw_reads/*.out cleaned_reads
+  860  ls cleaned_reads
+  861  ls
+  862  vim 
+  863  head G69185_report.txt
+  864  cd cleaned_reads
+  865* head
+  866  head G69185.out
+  867  cd ..
+  868  ls
+  869  vim bracker.sh
+  870  vim bracken.sh
+  871  bash bracken.sh
+  872  ls
+  873  cd cleaned_reads
+  874  ls
+  875  cd ..
+  876  conda deactivate
+  877  bash bracken.sh
+  878  ls
+  879  ls raw_reads
+  880  ls cleaned_reads
+  881  vim bracken.sh
+  882  bash bracken.sh
+  883  ls
+  884  ls cleaned_reads
+  885  mkdir bracken_output
+  886  mv *_species.txt bracken_output
+  887  mv cleaned_reads/*_species.txt bracken_output
+  888  mv cleaned_reads/*-out.tsv bracken_output
+  889  ls
+  890  mk scripts
+  891  mkdir scripts
+  892  mv *.sh scripts
+  893  ls
+  894  cd scripts
+  895  ls
+  896  cd bracken.sh
+  897  vim bracken.sh
+  898  vim
+  899  vim bracken.sh
+  900  vim
+  901  cd ..
+  902  bash scripts/krona.sh
+  903  ls
+  904  ls cleaned_reads
+  905  updateTaxonomy.sh
+  906  bash updateTaxonomy.sh
+  907  scripts
+  908  bash updateTaxonomy.sh
+  909  ls
+  910  cd scripts
+  911  vim krona.sh
+  912  cd..
+  913  cd. 
+  914  cd
+  915  ./updateTaxonomy.sh
+  916  conda activate kraken2
+  917  ./updateTaxonomy.sh
+  918  ls
+  919  cd metagenomics
+  920  ls
+  921  cd scripts
+  922  ls
+  923  krona.sh
+  924  vim krona.sh
+  925  bash krona.sh
+  926  ./updateTaxonomy.sh
+  927  cd
+  928  ./updateTaxonomy.sh
+  929  bash ./updateTaxonomy.sh
+  930  install.p1
+  931  install.pi
+  932  install.pl
+  933  bash install.pl
+  934  ./install.pl
+  935  env list
+  936  conda env list
+  937  conda list
+  938  ls
+  939  cd scratch
+  940  ls
+  941  cd ..
+  942  cd miniconda3
+  943  ls
+  944  cd envs
+  945  cd
+  946  cd miniconda3
+  947  cd envs
+  948  ls
+  949  cd kraken2
+  950  ls
+  951  cd opt
+  952  ls
+  953  cd krona
+  954  ls
+  955  cd taxonomy
+  956  ls
+  957  cd placeholder
+  958  l
+  959  cd ..
+  960  ls
+  961  cd scripts
+  962  ls
+  963  cd
+  964  cd /gpfs1/home/j/w/jwcollie/miniconda3/envs/kraken2/opt/krona/scripts/../lib/KronaTools
+  965  ls
+  966  cd miniconda3
+  967  ls
+  968  cd envs
+  969  cd kraken2
+  970  ls
+  971  cd opt
+  972  ls
+  973  cd krona
+  974  ls
+  975  ls scripts
+  976  cd
+  977  cd miniconda3/envs/kraken2/opt/krona/scripts/../lib/KronaTools
+  978  cd miniconda3/envs/kraken2/opt/krona/scripts
+  979  ls
+  980  ls -a
+  981  ls
+  982  cd ..
+  983  ls
+  984  bash updateTaxonomy.sh
+  985  cd
+  986  ls
+  987  cd metagenomics
+  988  cd scipt
+  989  cd script
+  990  ls
+  991  cd scipts
+  992  cd scripts
+  993  ls
+  994  bash krona.sh
+  995  vim krona.sh
+  996  bash krona.sh
+  997  vim krona.sh
+  998  bash krona.sh
+  999  vim krona.sh
+ 1000  conda deactivate
+ 1001  bash krona.sh
+ 1002  conda activate krona
+ 1003  conda activate kraken2
+ 1004  conda update krona
+ 1005  bash krona.sh
+ 1006  conda deactivate
+ 1007  bash krona.sh
+ 1008  vim krona.sh
+ 1009  bash krona.sh
+ 1010  cd ..
+ 1011  bash scripts/krona.sh
+ 1012  qQq
+ 1013  q
+ 1014  q:q
+ 1015  q
+ 1016  Q
+ 1017  cd scripts
+ 1018  ls
+ 1019  vim bracken.sh
+ 1020  ls
+ 1021  rim krona.sh
+ 1022  ls
+ 1023  rm krona.sh
+ 1024  vim
+ 1025  bash krona.sh
+ 1026  ls
+ 1027  cd ..
+ 1028  ls
+ 1029  ls cleaned_reads
+ 1030  ls bracken_output
+ 1031  ls
+ 1032  cd scripts
+ 1033  vim krona.sh
+ 1034  bash krona.sh
+ 1035  vim krona.sh
+ 1036  bash krona.sh
+ 1037  vim krona.sh
+ 1038  cd ..
+ 1039  ls
+ 1040  cd scripts
+ 1041  vim krona.sh
+ 1042  bash krona.sh
+ 1043  vim krona.sh
+ 1044  bash krona.sh
+ 1045  vim krona.sh
+ 1046  cd..
+ 1047  cd ..
+ 1048  bash scripts/krona.sh
+ 1049  QQ
+ 1050  Q
+ 1051  ls
+ 1052  cd scripts
+ 1053  ls
+ 1054  vim krona.sh
+ 1055  bash krona.sh
+ 1056  s
+ 1057  ls
+ 1058  vim krona.sh
+ 1059  cd ..
+ 1060  bash scripts/krona.sh
+ 1061  cim scripts/krona.sh
+ 1062  vim cripts/krona.sh
+ 1063  vim scripts/krona.sh
+ 1064  bash scripts/krona.sh
+ 1065  cd scripts
+ 1066  cim krona.sh
+ 1067  vim krona.sh
+ 1068  cd ..
+ 1069  ls
+ 1070  ls cleaned_reads
+ 1071  realpath G69185.out
+ 1072  cd cleaned_reads
+ 1073  ls
+ 1074  cd ..
+ 1075  ls
+ 1076  cd cleaned_reads
+ 1077  ls
+ 1078  realpath G69185.out
+ 1079  cd ..
+ 1080  realpath G69185.out
+ 1081  cd cleaned_reads
+ 1082  realpath G69185.out
+ 1083  readlink -f G69185.out
+ 1084  cd ..
+ 1085  ktImportTaxonomy -q 2 -t 3 /gpfs1/home/j/w/jwcollie/metagenomics/cleaned_reads/G69230.out -o /gpfs1/home/j/w/jwcollie/metagenomics/cleaned_reads/G69230_krona.html
+ 1086  conda activate kraken2
+ 1087  ktImportTaxonomy -q 2 -t 3 /gpfs1/home/j/w/jwcollie/metagenomics/cleaned_reads/G69230.out -o /gpfs1/home/j/w/jwcollie/metagenomics/cleaned_reads/G69230_krona.html
+ 1088  ls
+ 1089  ls cleaned_reads
+ 1090  ktImportTaxonomy -q 2 -t 3 /gpfs1/home/j/w/jwcollie/metagenomics/cleaned_reads/G80370.out -o /gpfs1/home/j/w/jwcollie/metagenomics/cleaned_reads/G80370_krona.html
+ 1091  kraken-biom cleaned_reads/*report_bracken_species.txt
+ 1092  conda install -c bioconda kraken-biom
+ 1093  conda create --name py2 python=2.7
+ 1094  conda deactivate
+ 1095  conda activate py2
+ 1096  conda install -c bioconda kraken-biom
+ 1097  kraken-biom cleaned_reads/*report_bracken_species.txt
+ 1098  cd cleaned_reads
+ 1099  kraken-biom *report_bracken_species.txt
+ 1100  ls
+ 1101  cd ..
+ 1102  ls
+ 1103  kraken-biom bracken_ouput/*report_bracken_species.txt
+ 1104  cd bracken_ouput
+ 1105  cd bracken_output
+ 1106  ls
+ 1107  kraken-biom *report_bracken_species.txt
+ 1108  conda install -c bioconda kraken2 bracken
+ 1109  kraken-biom *report_bracken_species.txt
+ 1110  conda install h5py
+ 1111  kraken-biom *report_bracken_species.txt
+ 1112  ls
+ 1113  biom convert -i table.biom -o bracken_output.txt --to-tsv --header-key taxonomy
+ 1114  ls
+ 1115  cd ..
+ 1116  ls
+ 1117  mkdir log
+ 1118  mv log_4_7_2021.txt log
+ 1119  cd log
+ 1120  history > log_4_8_2021.txt
