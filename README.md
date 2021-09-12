@@ -4,15 +4,15 @@ This purpose of this project was to analyze the viral taxonomy among a sample se
 
 ## Available Scripts
 
-In the server directory, you can run:
+In the scripts directory, you can run:
 
 ### `run download.sh`
 Downloads required files.\
-Run from prefered download directory.
+Ideally run from prefered download directory.
 
 ### `run fastqc.sh`
 Runs fastQC quality control report on raw reads.\
-Run in folder with downloaded raw reads.
+Ideally run in folder with downloaded raw reads.
 
 ### `run multiqc.sh`
 Runs multiQC generating a aggreagte report of samples.\
@@ -22,7 +22,7 @@ Runs kraken analysis on sample reads for taxonomic classification.\
 
 ### `run bracken.sh`
 Runs bracken analysis on kraken output, to determine abundance at taxonomic levels.\
-Run from 'cleaned_reads' folder.
+Ideally run from 'cleaned_reads' folder.
 
 ### `run krona.sh`
 Runs Krona to create interactive taxonomic chart from analysis.\
